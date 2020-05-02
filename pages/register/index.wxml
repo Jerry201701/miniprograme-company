@@ -1,0 +1,38 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <!-- <view class="page__hd">
+        <view class="page__title">Input</view>
+        <view class="page__desc">表单输入</view>
+    </view> -->
+  <view class="page__bd">
+    <!-- <view class="weui-cells__title">表单</view> -->
+    <view class="weui-cells weui-cells_after-title">
+
+      <view class="weui-cell  weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">+86</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入手机号" value="{{userInfo.loginPhone}}" data-event="input" bindinput="phoneInput" />
+        </view>
+        <view class="weui-cell__ft">
+          <view class="weui-vcode-btn">获取验证码</view>
+        </view>
+      </view>
+
+      <view class="weui-cell  weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">验证码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入验证码" />
+        </view>
+
+      </view>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="register">登录/注册</button>
+    </view>
+    <view class="weui-cells__tips">未注册用户将直接注册，注册代表你已同意《食才用户协议》</view>
+
+  </view>
+</view>

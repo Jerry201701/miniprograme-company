@@ -1,0 +1,38 @@
+.container {
+  background-color: #fff;
+  height: 1100rpx;
+  display: block;
+
+}
+
+.companys{
+  margin-top: 10rpx;
+}
+
+.weui-cells::before{
+ border: 0;
+}
+.weui-cells::after{
+  border-bottom: 0;
+}
+
+.scale{
+ font-size: 13px;
+ color: #888888;
+ text-align: right;
+
+}
+
+.basic{
+  font-size: 8px;
+}
+.locate{
+  width: 50rpx;
+  height: 50rpx;
+}
+.address{
+  font-size: 20rpx;
+  /* width: 300rpx;
+  word-wrap: break-word;
+  word-break: normal; */
+}

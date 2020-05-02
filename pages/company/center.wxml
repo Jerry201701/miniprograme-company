@@ -1,0 +1,80 @@
+<view class="page">
+
+  <view class="brief">
+    <view>
+  <view>{{manager.name}}</view>
+  <view>{{manager.company}}</view>
+  <view>{{manager.phone}}</view>
+    </view>
+    <view>
+      <image src="{{logoUrl}}" class="portrait" bindtap="editManager"></image>
+    </view>
+  </view>
+  <view>
+
+   <view class="weui-flex count">
+            <view class="weui-flex__item release">
+            <view class="placeholder">{{deliveryJobNumber}}</view>
+            <view class="placeholder">发布岗位</view>
+            </view>
+            <view class="weui-flex__item interview">
+            <view class="placeholder">{{interviewNumber}}</view>
+            <view class="placeholder">邀请面试</view>
+            </view>
+            <view class="weui-flex__item success">
+            <view class="placeholder">{{entryNumber}}</view>
+            <view class="placeholder">成功入职</view>
+            </view>
+    </view>
+
+   <!-- <view class="weui-cells weui-cells_after-title">
+  <navigator url="{{createResume?'/pages/resume/create-resume/create-resume':'/pages/resume/resume'}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__hd">
+                    <image src="/images/job/resume.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">简历</view>
+               
+            </navigator>
+            <navigator url="/pages/delivery-record/delivery-record" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/images/job/record.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">投递记录</view>
+                
+            </navigator>
+            
+        </view> -->
+
+
+          <view class="weui-cells weui-cells_after-title">
+            <navigator url="/pages/company-detail/company-detail" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd" style="position: relative;margin-right: 30rpx;">
+                    <image src="https://picture2019-1256835711.cos.ap-beijing.myqcloud.com/recruit/home.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd" style="margin-left:80rpx;">公司主页</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="./list-manager" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+             <view class="weui-cell__hd" style="position: relative;margin-right: 30rpx;">
+                    <image src="https://picture2019-1256835711.cos.ap-beijing.myqcloud.com/recruit/management.png" style="width: 50px; height: 50px; display: block"/>
+                    <view wx:if="{{managerNumber>0}}" class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">{{managerNumber}}</view>
+                </view>
+                <!-- <view class="weui-cell__hd">
+                    <image src="https://picture2019-1256835711.cos.ap-beijing.myqcloud.com/recruit/management.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+                    <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>
+                </view> -->
+                <view class="weui-cell__bd" style="margin-left:50rpx;">招聘者管理</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+
+
+
+
+
+
+
+  </view>
+ 
+
+</view>

@@ -1,0 +1,100 @@
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+
+
+    <!--条件查询-->
+    <!--岗位添加搜索-->
+    <view class="add-position">
+      <view class="up-left">
+        <mp-icon icon="back" color="black" size="{{10}}" bindtap="prePost"></mp-icon>
+        {{job.jobName}}
+        <mp-icon icon="arrow" color="black" size="{{10}}" bindtap="nextPost"></mp-icon>
+      </view>
+      <view class="up-right">
+        <mp-icon icon="add" color="black" size="{{25}}" style="margin-right:20rpx;" bindtap="addPosition"></mp-icon>
+        <icon type="search" size="20" bindtap="searchPosition"></icon>
+      </view>
+    </view>
+    <!--推荐最新与条件查询-->
+    <view class="screen">
+      <view class="second-left">
+        <view class="weui-flex">
+          <view class="weui-flex__item" bindtap="recommend">推荐</view>
+          <view class="weui-flex__item" style="margin-left:20rpx;" bindtap="upToDate">最新</view>
+        </view>
+      </view>
+      <view class="second-right">
+      <button class="weui-btn mini-btn region" type="default" size="mini" bindtap="selectRegion">成都</button>
+      <button class="weui-btn mini-btn category" type="default" size="mini" bindtap="selectCategory">筛选</button>
+      </view>
+    </view>
+
+    <!--遍历查询出来的结果-->
+    <view>
+
+      <!--搜索结果展示-->
+      <!--求职者基本信息展示-->
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell" wx:for="{{applicants}}" wx:key="value" bindtap="showEmployeeDetail" data-id="{{item.id}}">
+          <view class="weui-cell__bd desc">
+            <view class="weui-flex">
+              <view class="weui-flex__item">
+                <view style="font-size: 15px;color: #888888;">{{item.applicantName}}</view>
+                <view style="font-size: 13px;color: #888888;">{{item.workYears}}年|大学|3000-5000</view>
+              </view>
+              <view class="weui-flex__item" style="text-align:right;">
+                <image src="{{item.headUrl}}" class="pic"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+     
+<!--    
+        <view class="weui-cell " bindtap="showEmployeeDetail" data-id="{{item.id}}">
+          <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+            <image src="/images/experience.png" style="width: 30px; height: 30px; display: block" />
+          </view>
+          <view class="weui-cell__bd desc">
+            <view class="weui-flex">
+              <view class="weui-flex__item experience-positon">
+                美食餐饮有限公司.中餐厨师
+              </view>
+              <view class="weui-flex__item">
+                <view class="period">2019/10-2020/03</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      
+
+      
+      <view class="certificates">
+      <view class="certificate">证书一</view>
+      <view class="certificate">证书二</view>
+      <view class="certificate">证书三</view>
+      <view class="certificate">证书四</view>
+      </view>
+  
+      <view class="weui-article__section descrption">
+        <view class="weui-article__h3">简历描述内容</view>
+        <view class="weui-article__p introduce">
+          第四类企业是指除限制清单以外的其他市场主体。限制清单的对象主要包括影剧院、棋牌室、游艺厅、书店、网吧、舞厅、酒吧、KTV、美容店、健身房、培训机构、堂食类餐
+        </view>
+      </view>
+ -->
+
+ 
+    </view>
+
+
+
+
+
+
+
+
+  </view>
+</view>

@@ -1,0 +1,28 @@
+
+.container {
+  background-color: #fff;
+  height: 1100rpx;
+  display: block;
+
+}
+.scale{
+ font-size: 13px;
+ color: #888888;
+ text-align: right;
+
+}
+
+
+.weui-cells::after{
+  border-bottom: 0;
+}
+
+.button-sp-area{
+    text-align:right;
+    position: fixed;
+    right: 20rpx;
+    bottom: 400rpx;
+}
+.mini-btn{
+    margin: 0 4px;
+}

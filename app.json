@@ -1,0 +1,100 @@
+{
+  "pages": [
+    "pages/first/first",
+    "pages/employee/search-condition",
+    "pages/search/search-company",
+    "pages/create-company/create-company",
+    "pages/release/add/add",
+    "pages/register/index",
+    "pages/company/list-manager",
+    "pages/company/center",
+    "pages/employee/search-employee",
+    "pages/delivery/delivery",
+    "pages/delivery-record/delivery-record",
+    "pages/me/me",
+    "pages/chat/index",
+    "pages/message/index",
+    "pages/job/job",
+    "pages/employee/index",
+    "pages/release/list/list",
+    "pages/search/manager-info",
+    "pages/search/notify-status",
+    "pages/search/company-basic",
+    "pages/company-list/company-list",
+    "pages/company/manager",
+    "pages/start/start",
+    "pages/index/index",
+    "pages/job-list/index",
+    "pages/job-hunter-list/job-hunter-list",
+    "pages/resume/resume",
+    "pages/edit-company/edit-company",
+    "pages/experience/job-experience/index",
+    "pages/experience/education-experience/index",
+    "pages/resume/create-resume/create-resume",
+    "pages/delivery/delivery-single/delivery-single",
+    "pages/job-details/index",
+    "pages/release/update/update",
+    "pages/release/edit/edit",
+    "pages/company-detail/company-detail",
+    "pages/certificate/certificate",
+    "pages/release/add/add-name/add-name",
+    "pages/loginRegister/loginRegister",
+    "pages/city/city",
+    "pages/job-category/job-category",
+    "pages/authorize/index",
+    "pages/authorize/bindmobile",
+    "pages/sign/index",
+    "pages/category/category"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+        {"pagePath": "pages/release/list/list",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png",
+        "text": "岗位"
+      },
+        {"pagePath": "pages/employee/index",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png",
+        "text": "搜人"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/company/center",
+        "iconPath": "images/nav/my-off.png",
+        "selectedIconPath": "images/nav/my-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx56c8f077de74b07c"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "mp-icon": "components/icon/icon",
+    "mp-toptips": "components/toptips/toptips"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "食才招聘需要获取你的位置信息"
+    }
+  }
+}

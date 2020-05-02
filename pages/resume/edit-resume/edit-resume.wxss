@@ -1,0 +1,11 @@
+@import '/style/editResume.wxss';
+@import '/template/toast/toast.wxss';
+
+.weui-label::before{
+  display: none;
+}
+.basic-title{
+  text-align: center;
+  margin-bottom: 10rpx;
+  font-size: 50rpx;
+}

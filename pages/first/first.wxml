@@ -1,0 +1,35 @@
+<view class="container {{dark ? 'ground' : ''}}">
+  <view class="page__bd">
+    
+     <view class="weui-search-bar">
+      <view class="weui-search-bar__form" bindtap="searchPage">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text " class="weui-search-bar__input" disabled="true" />
+        </view>
+        <label class="weui-search-bar__label" >
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索寻找我的公司</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput"> 取消</view>
+    </view>
+  </view>
+
+  <view class="fist_img">
+    <image src="/images/job/logo.jpg" style="text-align:center;"></image>
+  </view>
+  <view wx:if="{{status}}" class="begin_login" bindtap="weiLoad">登录食才，开始效率招聘</view>
+  <view wx:if="{{condition}}" class="weui-flex " style="margin-top:50rpx;">
+            <view class="weui-flex__item" style="text-align:center">
+             <button class="weui-btn" type="default" size="mini" bindtap="quitLoad">退出登录</button>
+            </view>
+            <view class="weui-flex__item" style="text-align:center">
+             <!-- <button class="weui-btn" type="primary" size="mini" bindtap="createCompany" open-type="getUserInfo">创建公司</button> -->
+             <button class="weui-btn" type="primary" size="mini" bindgetuserinfo="createCompany" open-type="getUserInfo">创建公司</button>
+            </view>
+        </view>
+          
+  <login-dialog id="loginDialog" bind:comeBack="comeBack"></login-dialog>
+
+</view>

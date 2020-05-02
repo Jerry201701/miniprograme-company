@@ -1,0 +1,22 @@
+/* pages/me/me.wxss */
+.portrait{
+  width: 160rpx;
+  height: 160rpx; 
+  margin-right: 20rpx;
+}
+.brief{
+  margin-left: 40rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  justify-content:space-between;
+}
+.emp_name{
+  font-size: 60rpx;
+}
+.count{
+text-align: center;
+margin-bottom: 30rpx;
+
+}

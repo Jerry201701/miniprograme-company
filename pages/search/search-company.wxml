@@ -1,0 +1,102 @@
+<view class="container ">
+  <view class="page__bd">
+
+
+    <!--搜索框-->
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text " class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" confirm-type="search" bindconfirm='toSearch' />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索公司岗位</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput"> 取消</view>
+    </view>
+
+    <!--全称，品牌和简称条件搜索-->
+    <view class="search">
+    <radio-group class="radio-group" bindchange="radioChange">
+    <view class="search-topic">
+    <view>
+      <radio class="radio" value="0" checked="{{item.checked}}">
+        <text>不限</text>
+      </radio>
+    </view>
+    <view>
+      <radio class="radio" value="1" checked="{{item.checked}}">
+        <text>公司</text>
+      </radio>
+    </view>
+    <view>
+      <radio class="radio" value="2" checked="{{item.checked}}">
+        <text>品牌</text>
+      </radio>
+    </view>
+    <view>
+      <radio class="radio" value="3" checked="{{item.checked}}">
+        <text>简称</text>
+      </radio>
+    </view>
+     </view>
+    </radio-group>
+    </view>
+
+
+
+
+
+
+
+
+    <!--搜索结果展示-->
+
+
+    <!-- <view class="weui-cells weui-cells_after-title" wx:for="{{companyArray}}" wx:key="key"> -->
+
+
+    <view class="weui-cells weui-cells_after-title" wx:for="{{companyArray}}" wx:key="key">
+      <view class="weui-cell companys" bindtap="showCompanyBasic" data-id="{{item.id}}">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <image src="{{item.companyLogo}}" style="width: 50px; height: 50px; display: block" />
+        </view>
+        <view class="weui-cell__bd desc">
+
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view style="font-size: 13px;color: #888888;">{{item.fullName}}</view>
+              <view style="font-size: 13px;color: #888888;">品牌:{{item.brand}}</view>
+              <view style="font-size: 13px;color: #888888;">{{item.address}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="scale">{{item.minStaff}}-{{item.maxStaff}}人</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="icon-box" wx:if="{{conditions}}">
+      <!-- <icon type="info" size="64"></icon> -->
+      <icon type="info" size="32"></icon>
+      <view class="icon-box__ctn">
+        <view class="icon-box__title">没有满足条件的数据</view>
+        <!-- <view class="icon-box__desc">用于</view> -->
+      </view>
+    </view>
+
+    <view style="text-align:center;">
+      <button wx:if="{{list}}" style="margin-top:300rpx;" class="weui-btn" type="default" size="mini" bindtap="toCreate">点我创建公司</button>
+    </view>
+
+
+
+  </view>
+</view>
+      <login-dialog id="loginDialog" bind:comeBack="comeBack"></login-dialog>

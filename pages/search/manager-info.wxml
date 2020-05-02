@@ -1,0 +1,44 @@
+<view class="container ">
+  <view class="page__bd">
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                <input class="weui-input" placeholder="请输入姓名" data-event="input" bindinput="nameInput"/>
+                </view>
+            </view>
+            <view class="weui-cell  weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">电话</view>
+                </view>
+                <view class="weui-cell__bd">
+                 <input class="weui-input" placeholder="请输入电话" data-event="input" bindinput="phoneInput"/>
+                </view>
+                <!-- <view class="weui-cell__ft">
+                    <view class="weui-vcode-btn">获取验证码</view>
+                </view> -->
+            </view>
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">备注</view>
+                </view>
+                <view class="weui-cell__bd">
+                 <input class="weui-input" placeholder="请输入备注" data-event="input" bindinput="remarkInput"/>
+                </view>
+            </view>
+          </view>
+
+           <view class="page__bd page__bd_spacing">
+        
+        <view class="button-sp-area">
+            <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="submitCheck">确认提交</button>
+            <!-- <button class="weui-btn mini-btn" type="default" size="mini">按钮</button>
+            <button class="weui-btn mini-btn" type="warn" size="mini">按钮</button> -->
+        </view>
+    </view>
+
+
+</view>
+</view>

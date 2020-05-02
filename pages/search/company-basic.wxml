@@ -1,0 +1,69 @@
+<view class="container">
+  <!-- 下拉筛选框 -->
+  <view class="page">
+    <view class="page__bd">
+
+
+<!--公司概况-->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell companys" bindtap="showCompanyBasic" data-id="{{companyBasic.id}}">
+        <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+          <image src="{{companyBasic.companyLogo}}" style="width: 50px; height: 50px; display: block" />
+        </view>
+        <view class="weui-cell__bd desc">
+
+          <view class="weui-flex">
+            <view class="weui-flex__item" >
+              <view style="font-size: 13px;color: #888888;">{{companyBasic.fullName}}</view>
+              <view style="font-size: 13px;color: #888888;">品牌:{{companyBasic.brand}}</view>
+              <!-- <view style="font-size: 13px;color: #888888;">{{companyBasic.address}}</view> -->
+            </view>
+            <view class="weui-flex__item">
+              <view class="scale">{{companyBasic.minStaff}}-{{companyBasic.maxStaff}}人</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+<!--公司简介-->
+ <view class="weui-article">
+            <view class="weui-article__section">
+                    <view class="weui-article__h3">公司简介</view>
+                    <view class="weui-article__p basic">
+                    {{companyBasic.description}}   
+                    </view>
+            </view>
+        </view>
+     
+        <!--公司地址和门店管理员-->
+
+      <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">公司地址</view>
+                
+            <!-- <view class="weui-flex__item"></view>
+            <view class="weui-flex__item">
+                </view> -->
+            <!-- <image  src="/images/ico-addr.png" class="locate" bindtap="locationAddress"></image> -->
+       
+                <view class="weui-cell__ft" class="address">{{companyBasic.address}}
+                <image  src="/images/ico-addr.png" class="locate" bindtap="locationAddress"></image>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">目前门店管理员</view>
+                <view class="weui-cell__ft">{{companyBasic.managerName}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd"></view>
+                <view class="weui-cell__ft">
+                 <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="joinCompany">加入公司</button>
+                </view>
+            </view>
+        </view>
+
+    </view>
+  </view>
+</view>
+ <login-dialog id="loginDialog" bind:comeBack="comeBack"></login-dialog>

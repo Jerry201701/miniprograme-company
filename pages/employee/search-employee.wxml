@@ -1,0 +1,154 @@
+<view class="page">
+ <view class="page__bd">
+<!--城市和关键词搜索-->
+<view class="search-condition">
+<view class="city-condition">
+<view class="select-wrap">
+    <select class="search-options" id="select" options="{{options}}" key="city_id" text="city_name" bind:change="change"></select>
+  </view>
+</view>
+<!-- <view class="other-condition">
+<input class="weui-input other" placeholder="职位/公司/学校/证书" />
+</view> -->
+<!--搜索框-->
+<view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">职位/公司/学校/证书</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <!-- <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator> -->
+
+        </view>
+
+
+
+
+
+<!-- 
+<view class="container" bindtap="close">
+  <view class="select-wrap">
+    <select id="select" options="{{options}}" key="city_id" text="city_name" bind:change="change"></select>
+  </view>
+</view> -->
+</view>
+<!--跳转到职位类别-->
+<view class="weui-cells weui-cells_after-title">
+<navigator url="/pages/release/add/add-name/add-name" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">{{jobName}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+</navigator>
+<!-- <navigator url="/pages/release/job-category" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">按职位类型搜索</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+</navigator> -->
+</view>
+
+<!--历史搜索记录-->
+
+        <!-- <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">历史搜索</view>
+                <view class="weui-cell__ft">
+                <mp-icon icon="delete" color="black" size="{{25}}" bindtap="clearHistory"></mp-icon>
+                </view>
+            </view>
+            <view class="weui-cell">
+                 <view class="weui-cell__bd">热菜厨师.城市.大专.3-5年</view>
+              
+            </view> 
+            <view class="weui-cell">
+                 <view class="weui-cell__bd">热菜厨师.城市.大专.3-5年</view>
+             
+            </view> 
+        </view> -->
+
+      <!--在线职位-->
+     <view class="online">
+      <!-- <view>在线职位</view>
+      <view class="weui-flex">
+            <view class="weui-flex__item" style="text-align:left;">
+            <view>川菜凉菜主厨</view>
+            <view>成都.5-6k</view>
+            </view>
+            <view class="weui-flex__item" style="text-align:left;">
+            <view>川菜热菜主厨</view>
+            <view>重庆.6-7k</view>
+            </view>
+        </view>  -->
+
+
+        
+    <view class="weui-flex post-sub-btn " >
+      <view class="weui-flex__item ">
+        <button class="weui-btn post_add_btn" type="primary" bindtap="searchCancel">取消</button>
+      </view>
+      <view class="weui-flex__item ">
+        <button class="weui-btn post_add_btn" type="primary" bindtap="searchConfirm">确定</button>
+      </view>
+    </view>
+
+
+
+
+
+        </view>
+    </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

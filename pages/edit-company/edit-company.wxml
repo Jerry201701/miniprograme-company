@@ -1,0 +1,100 @@
+<view class="container">
+  <!-- 下拉筛选框 -->
+  <view class="page">
+
+
+    <view class="aspiration" style="margin-top:30rpx;">
+    
+      <view class="create-title">编辑公司信息</view>
+      <view class="weui-cells weui-cells_after-title add">
+        <view class="weui-cell weui-cell_input expect-position-input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司/门店全称</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入公司/门店全称" value="{{companyInfo.fullName}}" data-event="input" bindinput="fullNameInput" />
+          </view>
+         
+        </view>
+
+        <view class="weui-cell weui-cell_input expect-position-input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司品牌</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入公司拥有品牌" value="{{companyInfo.brand}}" data-event="input" bindinput="brandInput" />
+          </view>
+        
+        </view>
+
+        <view class="weui-cell weui-cell_input expect-position-input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">简称</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入公司/品牌简称" value="{{companyInfo.shortName}}" data-event="input" bindinput="shortNameInput" />
+          </view>
+         
+        </view>
+
+        <view class="weui-cell weui-cell_input salary-input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">人员规模</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="multiSelector" range="{{staffRange}}" value="{{staffValue}}" bindchange="bindStaffChange" bindcolumnchange="columnchange">
+              <view class="sex picker-inner">
+                <text class="placeholder" wx:if="{{!companyInfo.minStaff}}">请选择人员规模</text>
+                <text class="sex-val" wx:else>{{companyInfo.minStaff}}人 - {{companyInfo.maxStaff}}人</text>
+               
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input expect-position-input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司地址</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请选择公司门店/地址" value="{{companyInfo.address}}" data-event="input" bindinput="adressInput" />
+          </view>
+         
+          <image src="/images/ico-addr.png" style="width:50rpx;height:50rpx;" bindtap="getLocation"></image>
+        </view>
+
+
+       
+           <!--公司logo上传-->
+        <view class="weui-cell weui-cell_input expect-position-input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司logo</view>
+          </view>
+          <view class="weui-cell__bd">
+            <image src="{{companyInfo.companyLogo}}" wx:if="{{companyInfo.companyLogo!=''}}" class="head-pic">
+            </image>
+            <icon class="icon" type="clear" size="15" bindtap="delPicture" />
+            <view class="weui-uploader__input-box" wx:if="{{companyInfo.companyLogo===''}}">
+              <view class="weui-uploader__input" bindtap="uploadPortrait"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      
+      <view class="weui-cells weui-cells_after-title textarea-weui-cells">
+        <view class="weui-cell ">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="公司简要介绍" maxlength="1000" value="{{companyInfo.description}}" style="height: 3.3em" bindinput="operateTextarea" />
+            <view class="weui-textarea-counter">{{wordNumber}}/1000</view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 其他  -->
+      <button class="save-btn btn-w690" type="primary" bindtap="save">完成</button>
+      
+    </view>
+
+
+  </view>
+</view>

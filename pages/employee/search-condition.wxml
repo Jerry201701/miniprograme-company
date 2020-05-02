@@ -1,0 +1,85 @@
+<view class="page">
+  <!--经验要求-->
+  <view class="condition-title">经验要求</view>
+  <view class="experience">
+    <view class="condition" wx:for="{{workExperience}}" wx:for-item="item" wx:key="key">
+      <view class="{{item.choose===false?'condition-detail':'condition-detail-choose'}}" bindtap="chooseExperience" data-text="{{item}}">
+        {{item.value}}</view>
+    </view>
+  </view>
+
+
+  <!--学历要求-->
+  <view class="condition-title">学历要求</view>
+  <view class="experience">
+    <view class="condition" wx:for="{{educataion}}" wx:for-item="item" wx:key="key">
+      <view class="{{item.choose===false?'condition-detail':'condition-detail-choose'}}" bindtap="chooseEducation" data-text="{{item}}">
+        {{item.value}}</view>
+    </view>
+
+
+    <!-- <view class="condition">
+      <view class="condition-detail">小学</view>
+    </view>
+    <view class="condition">
+      <view class="condition-detail">初中</view>
+    </view>
+    <view class="condition">
+      <view class="condition-detail">高中</view>
+    </view>
+    <view class="condition">
+      <view class="condition-detail">大学</view>
+    </view>
+    <view class="condition">
+      <view class="condition-detail">不限</view>
+    </view> -->
+  </view>
+
+
+  <!--薪资要求-->
+
+  <view class="condition-title">薪资待遇</view>
+  <view class="experience">
+   <view class="condition" wx:for="{{salary}}" wx:for-item="item" wx:key="key">
+      <view class="{{item.choose===false?'condition-detail':'condition-detail-choose'}}" bindtap="chooseSalary" data-text="{{item}}">
+        {{item.value}}</view>
+    </view>
+
+    <!-- <view class="condition">
+      <view class="condition-detail">不限</view>
+    </view>
+    <view class="condition">
+      <view class="condition-detail">1k-3k</view>
+    </view>
+    <view class="condition">
+      <view class="condition-detail">3k-5k</view>
+    </view>
+    <view class="condition">
+      <view class="condition-detail">5k以上</view>
+    </view> -->
+
+  </view>
+
+  <!-- 
+   <view class="condition-submit">
+   <view>
+     <button class="weui-btn mini-btn" type="default" size="mini">按钮</button>
+   </view>
+   <view>
+    <button class="weui-btn mini-btn" type="primary" size="mini">按钮</button>
+   </view>   
+        </view> -->
+  <!--提交条件-->
+  <view class="weui-flex condition-submit">
+    <view class="weui-flex__item">
+      <button class="weui-btn clean" type="default" bindtap="clearSearchRecord">清除</button>
+    </view>
+    <view class="weui-flex__item">
+      <button class="weui-btn sumbit" type="primary" bindtap="submitSearchCondition">确定</button>
+    </view>
+  </view>
+
+
+
+
+</view>
